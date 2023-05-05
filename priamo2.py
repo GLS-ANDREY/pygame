@@ -2,19 +2,18 @@ import pygame
 import random
 import time
 
-t = pygame.display.set_mode([1000, 700])  # Обычный режим
-# t = pygame.display.set_mode([0, 0],pygame.FULLSCREEN)# Полноэкранный режим
-o = random.randint(0, 400)
-f = random.randint(0, 400)
+t = pygame.display.set_mode([1000, 700])
+
 polet = pygame.Rect(100, 150, 300, 200)
+polet.centerx = 800
+polet.top = 0
+
 c = random.randint(100,300)
 goluboi = pygame.Rect(700, 0, c, 700)
-right_g = goluboi.right
 y_m = random.randint(0,660)
-x_m = random.randint(0,1000)
-monet = pygame.Rect(right_g-40,y_m, 40, 40)
-polet.centerx = 500
-polet.top = 0
+monet = pygame.Rect(0,y_m, 40, 40)
+monet.x = random.randint(goluboi.left,goluboi.right-40)
+
 s_y = 1
 while True:
     print(polet)
