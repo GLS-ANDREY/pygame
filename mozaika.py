@@ -10,10 +10,9 @@ st = pygame.image.load("stick.png")
 s = [u, p, st]
 
 k = 0
-for r in range(3):
-    print(2)
+for r in range(10):
     b = 0
-    for a in range(3):
+    for a in range(10):
         mr = random.choice(s)
         tr = pygame.transform.scale(mr, [random.randint(20, 120), random.randint(20, 120)])
         sv = tr.get_height()
