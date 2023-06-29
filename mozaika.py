@@ -7,16 +7,19 @@ t = pygame.display.set_mode([1000, 700])
 p = pygame.image.load("popugai.png")
 u = pygame.image.load("ulibka.png")
 st = pygame.image.load("stick.png")
-s = [u,p,st]
+s = [u, p, st]
 
-b = 0
-for a in range(10):
-    mr = random.choice(s)
-    tr = pygame.transform.scale(mr,[random.randint(20,120),random.randint(20,120)])
-    sv = tr.get_height()
-    t.blit(tr, [0, b])
-    b = b + sv
-
+k = 0
+for r in range(3):
+    print(2)
+    b = 0
+    for a in range(3):
+        mr = random.choice(s)
+        tr = pygame.transform.scale(mr, [random.randint(20, 120), random.randint(20, 120)])
+        sv = tr.get_height()
+        t.blit(tr, [k, b])
+        b = b + sv
+    k = k + 120
 
 while True:
     pygame.display.flip()
